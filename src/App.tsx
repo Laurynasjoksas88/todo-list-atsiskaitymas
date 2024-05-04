@@ -27,7 +27,7 @@ const App: React.FC = () => {
     setDeadline(0);
   }
 
-  const completeTask = (taskNameToDelete:string): void => {
+  const completeTask = (taskNameToDelete: string): void => {
     setTodo(todo.filter((task) => {
       return task.taskName !== taskNameToDelete
     }))
@@ -35,14 +35,15 @@ const App: React.FC = () => {
 
 
 
-  return (
+  return (<>
+    <h1 className='title'>TODO LIST'AS</h1>
     <div className='App'>
       <div className='header'>
         <div className='inputContainer'>
-          <input type='text' name='task' placeholder='Pridėti užduotiį' value={task} onChange={handleChange} />
-          <input type='number' name='deadline' placeholder='Nustatyti terminą(dienos)' value={deadline} onChange={handleChange} />
+          <input className='input-text' type='text' name='task' placeholder='Išsikelti sau tikslą...' value={task} onChange={handleChange} />
+          <input className='input-number' type='number' name='deadline' placeholder='Nustatyti terminą (dienos)' value={deadline} onChange={handleChange} />
+          <button className='addBtn' onClick={addTask}>Pridėti</button>
         </div>
-        <button onClick={addTask}>Pridėti</button>
       </div>
       <div className='todoList'>
         {todo.map((task: ITask, key: number) => (
@@ -50,6 +51,7 @@ const App: React.FC = () => {
         ))}
       </div>
     </div>
+  </>
   );
 }
 

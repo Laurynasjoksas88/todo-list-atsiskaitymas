@@ -5,18 +5,85 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(./img/background.jpg);
+  background-size: cover;
 }
 
 .App {
   width: 80vw;
   height: 80vh;
-  background-color: lightblue;
   display: flex;
   justify-content: center;
+}
+
+.header {
+  height: 40px;
 }
 
 .inputContainer {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
+  gap: 10px;
 }
 
+.input-text {
+  width: 400px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  outline: none;
+}
+
+.input-text::placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+.input-number::placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+.input-number {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-align: start;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  font-weight:bolder;
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+
+.addBtn {
+  height: 42.5px;
+  border: none;
+  width: 150px;
+  border-radius: 8px;
+  background-color: #49D649;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid green;
+}
+
+.todoList {
+  display: block;
+  justify-content: center;
+  background-color: white;
+}
